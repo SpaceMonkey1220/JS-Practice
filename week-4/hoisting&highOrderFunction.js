@@ -167,9 +167,9 @@ function transformToObj(value) {
   }
 }
 
-const addedTwo = list.map(add2)
+const addedTwo = list.map(add2);
 
-const dividebytwo = list.map(divideTwo)
+const dividebytwo = list.map(divideTwo);
 
 const transformListToArray = list.map(transformToObj)
 
