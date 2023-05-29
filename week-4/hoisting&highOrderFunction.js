@@ -173,6 +173,6 @@ const dividebytwo = list.map(divideTwo);
 
 const transformListToArray = list.map(transformToObj)
 
-console.log(list)
-console.log(addedTwo)
-console.log(transformListToArray)
+console.log(list);
+console.log(addedTwo);
+console.log(transformListToArray);
