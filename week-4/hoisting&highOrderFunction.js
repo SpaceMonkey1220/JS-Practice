@@ -153,26 +153,79 @@ const filterByTen = loop(list, greaterThanTen)
 // MAP
 
 
-function add2(value){
-  return value + 2
+// function add2(value){
+//   return value + 2
+// }
+
+// function divideTwo(value){
+//   return value / 2
+// }
+
+// function transformToObj(value) {
+//   return{
+//     [value]: value
+//   }
+// }
+
+// const addedTwo = list.map(add2);
+
+// const dividebytwo = list.map(divideTwo);
+
+// const transformListToArray = list.map(transformToObj)
+
+// console.log(list);
+// console.log(addedTwo);
+// console.log(transformListToArray);
+
+
+// NEXT DAY 
+
+// const greet = (mesage, transformFunction) => {
+//   console.log(transformFunction(mesage))
+// }
+
+
+// function transformUppercase(message){
+//   return message.toUpperCase()
+// }
+
+// greet("sdasdasd", transformUppercase)
+
+//Primul element gasit primul element returnat
+
+const list2 = [10, 30, 20, 50]
+
+function findElGreaterThan10(value){
+  return value > 10
 }
 
-function divideTwo(value){
-  return value / 2
-}
+const findElement = list2.find(value => value > 10)
 
-function transformToObj(value) {
-  return{
-    [value]: value
-  }
-}
+console.log(findElement)
 
-const addedTwo = list.map(add2);
 
-const dividebytwo = list.map(divideTwo);
 
-const transformListToArray = list.map(transformToObj)
 
-console.log(list);
-console.log(addedTwo);
-console.log(transformListToArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
