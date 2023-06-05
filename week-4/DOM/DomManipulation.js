@@ -121,36 +121,95 @@
                             // CHANGING DOM
 
 
-const ul = document.body.querySelector("ul")
+// const ul = document.body.querySelector("ul")
 
-for (let index = 0; index < 10; index++) {
-    const li = document.createElement("li")
-    li.textContent = `Am adaugat prin js un li ${index}`
-    li.style.color = "green"
-    ul.appendChild(li)
+// for (let index = 0; index < 10; index++) {
+//     const li = document.createElement("li")
+//     li.textContent = `Am adaugat prin js un li ${index}`
+//     li.style.color = "green"
+//     ul.appendChild(li)
+    
+// }
+
+// console.log(document.querySelectorAll("li"))
+
+// document.querySelectorAll("li")[0].style.backgroundColor = "purple"
+
+// ul.children[3].remove()
+// console.log(ul)
+
+// const flexContainer
+
+
+const list = [
+  {
+    title: "MUCK",
+    img: {
+      src: "https://picsum.photos/id/27/200/300",
+      alt: "MUCH",
+    },
+    description: "ceva",
+  },
+  {
+    title: "Ceva",
+    img: {
+      src: "https://picsum.photos/id/23/200/300",
+      alt: "ceva",
+    },
+    description: "ceva",
+  },
+  {
+    title: "ceva",
+    img: {
+      src: "https://picsum.photos/id/37/200/300",
+      alt: "MUCH",
+    },
+    description: "ceva",
+  },
+]
+
+
+const flexContainer = document.body.querySelector(".flex-container")
+
+
+const createElement = (itemTitle, itemDescription, itemImg) => {
+    const section = document.createElement("section")
+    const title = document.createElement("h2");
+    const img = document.createElement("img")
+    const descriere = document.createElement("p")
+    
+    title.textContent = itemTitle
+    descriere.textContent = itemDescription
+    img.setAttribute("src", itemImg.src)
+    img.setAttribute("alt", itemImg.alt)
+    // section.setAttribute("class", "item")
+    section.classList.add("item")
+    section.classList.add("item-bg")
+    section.classList.remove("item")
+    section.classList.replace("item", "newItem")
+    
+    section.appendChild(title)
+    section.appendChild(descriere)
+    section.appendChild(img)
+    
+    return section
     
 }
 
-console.log(document.querySelectorAll("li"))
+function createList(parentEl, list, createFunction){
+    for(const el of list){
+       const section = createElement(el.title, el.description, el.img)
+       parentEl.appendChild(section)
+    }
+}
 
-document.querySelectorAll("li")[0].style.backgroundColor = "purple"
+createList(flexContainer, list)
 
-ul.children[3].remove()
-console.log(ul)
+flexContainer.removeAttribute("id")
 
+console.log(flexContainer.getAttribute("id"))
 
-
-
-
-
-
-
-
-
-
-
-
-
+flexContainer.children[0].remove();
 
 
 
