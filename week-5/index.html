@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="events.js" defer></script>
+    <link rel="stylesheet" href="css.css">
+    <script src="practiceSignIn.js" async></script>
 </head>
 <body>
     <!-- <div>
@@ -16,8 +16,8 @@
        <button class="button-style" >click me3</button>
          <button id="remove">remove</button>
     </div> -->
-<!-- 
-    <ul>
+
+    <!-- <ul id="list">
         <li>ceva</li>
         <li>ceva
             <button id="btn">click me</button>
@@ -27,12 +27,55 @@
         <li>ceva</li>
     </ul> -->
 
-    <a href="" target="_blank">Google</a>
+    <!-- <a href="" target="_blank">Google</a> -->
 
-    <div>
+    <!-- <div>
         <label for="data">Introdu data</label>
         <input type="text" id="data" name="data">
-    </div>
-    <button id="getData">Submit</button>
+    </div> -->
+    <!-- <form action="" id="form">
+        <div>
+          <label for="nume">Introdu nume</label>
+          <input type="text" id="nume" name="nume">
+      </div>
+  
+        <div>
+          <label for="prenume">Introdu prenume</label>
+          <input type="text" id="prenume" name="prenume">
+      </div>
+  
+       <div>
+          <label for="password">Introdu password</label>
+          <input type="text" id="password" name="password">
+          <button id="show-hide">show-hide</button>
+      </div>
+      <button type="submit" id="getData">Submit</button>
+      
+    </form> -->
+
+
+    <form action="" id="signUp">
+        <h1>SIGN UP</h1>
+        <div>
+            <label for="userName">userName</label>
+            <input type="text" name="userName" id="userName" name="userName"> 
+            <span class="hide">Camp obligatoriu</span>
+        </div>
+
+        <div>
+            <label for="password">parola</label>
+            <input type="password" name="password" id="password">
+            <span class="hide">Camp obligatoriu</span>
+        </div>
+
+        <div>
+            <label for="confirmPassword">confirm password</label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+            <span class="hide">Camp obligatoriu</span>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    <button id="butt">add to local Storage</button>
+    <button id="butt2">show Storage</button>
 </body>
 </html>

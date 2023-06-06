@@ -88,6 +88,77 @@
 const button = document.getElementById("getData")
 
 button.addEventListener("click", () => {
-  const input = document.getElementById("data")
-  console.log(input.value)
+  const nume = document.getElementById("nume")
+  const prenume = document.getElementById("prenume")
+  const password = document.getElementById("password")
+  if(nume.value !== "" && prenume.value !== "" && password.value !== ""){
+    console.log(nume.value, "", prenume.value, "", password.value)
+  } else {
+    alert("Nu ai introdus toate datele")
+  }
+ 
 })
+
+
+// const inputss = {
+//   nume: "",
+//   prenume: "",
+//   password: ""
+// }
+
+// INPOTANT
+const ian = ["name", "password", "prenume", "age"]
+
+const form = document.getElementById("form")
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+
+
+
+  const inputs = e.target
+  console.log(inputs)
+
+  //INPORTANT
+  // aici a filtrat cheile din ian apoi am returnat un array care contine
+   const emptyInput = ian.filter((key) => {
+     return inputs[key].value === ""
+   })
+
+   if (emptyInput.length > 0) {
+     alert("nu ai introdus tot")
+     return
+   }
+
+  // for(let i = 0; i < in.length)
+
+
+  console.log(e.target.nume.value)
+  console.log(e.target.prenume.value)
+  console.log(e.target.password.value)
+  // console.log(Object.values(e.target))
+ 
+
+})
+
+const showHideBtn = document.getElementById('show-hide')
+
+showHideBtn.addEventListener("click", (e) => {
+  const inputPassword = document.getElementById("password")
+  if(inputPassword.getAttribute("type") === "password"){
+    inputPassword.setAttribute("type", "text")
+    e.target.textContent = "hide"
+  } else {
+    inputPassword.setAttribute("type", "password")
+    e.target.textContent = "show"
+  }
+
+})
+
+
+// AICI IN LOC SA FACEM O FUNCTIE PT FICARE NE FOLOSIM ASA
+// const listUl = document.getElementById("list")
+
+// listUl.addEventListener("click", (e) => {
+//   console.log(e.target.textContent)
+//   console.log(e.currentTarget)
+// })
