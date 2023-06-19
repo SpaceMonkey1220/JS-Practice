@@ -32,35 +32,63 @@ buttonStop.addEventListener("click", (e)=> {
 
 // aici totul este asincron
 
+const promise = fetch("../users.json")
+
 let counter = 1
-const promise = new Promise((fulfilled, rejected)=> {
-    console.log("promise getting data")
-   const id = setInterval(() => {
-        console.log("calculating")
-    }, 500)
+// const promise = new Promise((fulfilled, rejected)=> {
+//     console.log("promise getting data")
+//    const id = setInterval(() => {
+//         console.log("calculating")
+//     }, 500)
 
-    setTimeout(() => {
-        clearInterval(id)
-        // fulfilled({nume:"daAMNume"})
-        rejected({status: "404",
-    message: "ERROR 404"})
-    }, 3000)
+//     setTimeout(() => {
+//         clearInterval(id)
+//         fulfilled({nume:"daAMNume"})
+//         rejected({status: "404",
+//     message: "ERROR 404"})
+//     }, 3000)
 
-});
+// });
 
-counter = counter + 2
-promise.then((response) => {
 
+promise.then(response => {
+    // console.log("I got the data")
+    // console.log(response)
+
+    // const returnObj = {
+    //     message: `here is your data ${response.nu}`
+    // }
+
+    // return returnObj
     console.log(response)
+    if(response.ok && response.status === 200){
+        return response.json()
+    }
+
+    return Promise.reject("There is an error")
+}).then((response)=> {
+
+
 })
 
-promise.catch((error) => {
+promise.catch(error => {
     console.log(error)
 })
 
-counter = counter + 3
 
-console.log(counter)
+// counter = counter + 2
+// promise.then((response) => {
+
+//     console.log(response)
+// })
+
+// promise.catch((error) => {
+//     console.log(error)
+// })
+
+// counter = counter + 3
+
+// console.log(counter)
 
 
 
