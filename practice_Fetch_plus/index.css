@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tile{
+
+}
+
+.tile img {
+    width: 100px;
+}
